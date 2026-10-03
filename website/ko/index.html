@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh-CN" class="echuu-booting">
+<html lang="ko" class="echuu-booting">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,41 +11,58 @@
       href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500&family=MuseoModerno:wght@400;500;600;700;800;900&family=Shrikhand&family=Zen+Maru+Gothic:wght@500;700&family=42dot+Sans:wght@300;400;700;800&family=Agu+Display&family=Noto+Serif+SC:wght@300;400&display=swap"
       rel="stylesheet"
     />
-    <meta name="description" content="Echuu 是面向虚拟主播与原创角色创作者的 AI VTuber 直播创作平台，提供 VRM 角色、实时动作捕捉、直播场景、角色人格与内容制作工具。" />
-    <meta name="keywords" content="AI VTuber,虚拟主播,动作捕捉,VRM,虚拟直播,Echuu" />
-    <meta name="robots" content="index,follow,max-image-preview:large" />
+    
+    
+    
     <meta name="referrer" content="strict-origin-when-cross-origin" />
     <meta name="theme-color" content="#58b8ed" />
+    <script>
+      // 首页开场是黑底：首帧、加载幕都用黑色，不再闪一下蓝色。子页面仍是天空色。
+      (function(){var p=location.pathname.replace(/\/+$/,'');if(p.indexOf('/website')<0||/\/website(\/(zh|en|ja|ko))?$/.test(p))document.documentElement.classList.add('echuu-dark-boot')})();
+    </script>
     <style id="echuu-critical-transition">
       html,body{margin:0;min-height:100%;background:#73c8f2;color:#fff}body{overflow-x:hidden}
-      #echuu-page-curtain{position:fixed;inset:0;z-index:2147483647;display:grid;place-items:center;overflow:hidden;background:radial-gradient(ellipse at 78% 18%,rgba(255,255,255,.72) 0 9%,rgba(255,255,255,0) 31%),radial-gradient(ellipse at 28% 74%,rgba(255,255,255,.62) 0 12%,rgba(255,255,255,0) 35%),linear-gradient(155deg,#22b6f0 0%,#8bd2f2 45%,#dfe8ff 100%);opacity:1;transition:opacity 240ms cubic-bezier(.23,1,.32,1);pointer-events:auto}
-      #echuu-page-curtain::before{content:"";position:absolute;inset:-16%;background:radial-gradient(ellipse at 35% 35%,rgba(255,255,255,.5),transparent 30%),radial-gradient(ellipse at 70% 68%,rgba(255,255,255,.38),transparent 32%);transform:scale(1.05)}
-      .echuu-page-curtain__mark{position:relative;display:flex;align-items:center;gap:14px;font:500 13px/1 Arial,sans-serif;letter-spacing:.24em;text-transform:uppercase;text-shadow:0 1px 12px rgba(23,86,137,.28)}
-      .echuu-page-curtain__mark::before{content:"";width:9px;height:9px;border:2px solid currentColor;border-radius:50%;box-shadow:18px 0 0 -3px currentColor}
+      html.echuu-dark-boot,html.echuu-dark-boot body{background:#000}
+      /* 加载幕：只是一块和页面同色的纯色，盖住 React 接管前的 SEO 文字；没有字标、没有渐变 */
+      #echuu-page-curtain{position:fixed;inset:0;z-index:2147483647;background:#73c8f2;opacity:1;transition:opacity 240ms cubic-bezier(.23,1,.32,1);pointer-events:auto}
+      html.echuu-dark-boot #echuu-page-curtain{background:#000}
       html.echuu-ready #echuu-page-curtain{opacity:0;pointer-events:none}
       html.echuu-leaving #echuu-page-curtain{opacity:1;pointer-events:auto;transition-duration:180ms}
-      @media(prefers-reduced-motion:reduce){#echuu-page-curtain{transition:none}.echuu-page-curtain__mark{display:none}}
+      @media(prefers-reduced-motion:reduce){#echuu-page-curtain{transition:none}}
     </style>
-    <noscript><style>#echuu-page-curtain{display:none}</style></noscript>
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Echuu" />
-    <meta property="og:title" content="Echuu AI VTuber 直播创作平台" />
-    <meta property="og:description" content="从原创角色、实时动作捕捉到直播互动，一站式创建属于你的 AI VTuber。" />
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Echuu AI VTuber 直播创作平台" />
-    <meta name="twitter:description" content="从原创角色、实时动作捕捉到直播互动，一站式创建属于你的 AI VTuber。" />
-    <title>Echuu AI VTuber 直播创作平台｜VRM 动作捕捉与虚拟直播</title>
-    <script type="module" crossorigin src="/echuu-website-preview/app-build/index-4GiA1K1Q.js"></script>
-    <link rel="stylesheet" crossorigin href="/echuu-website-preview/app-build/index-Cjrxq7u0.css">
-  </head>
+    <noscript><style>
+      #echuu-page-curtain{display:none}html,body{background:#f3f7f8!important;color:#173548!important}
+      .seo-static{max-width:850px;margin:auto;padding:32px 24px;font:17px/1.8 system-ui,sans-serif}
+      .seo-static h1{font-size:32px;line-height:1.3}.seo-static a{color:#155c88}.seo-static section{margin:32px 0}
+    </style></noscript>
+    
+    
+    
+    
+    
+    
+    
+    
+    <script type="module" crossorigin src="/echuu-website-preview/app-build/index-DbmrMEX1.js"></script>
+    <link rel="stylesheet" crossorigin href="/echuu-website-preview/app-build/index-VBhPz4d7.css">
+  <title>Echuu — OC 크리에이터를 위한 AI VTuber 플랫폼</title>
+<meta data-seo="1" name="description" content="캐릭터를 설정하고 주제를 고르면, 캐릭터가 이야기를 들려주고 시청자와 소통합니다. Echuu는 OC 크리에이터를 위한 공동 창작 퍼포먼스 엔진이자 AI VTuber 스트리밍 플랫폼입니다." />
+<meta data-seo="1" name="robots" content="noindex,follow" />
+<meta data-seo="1" property="og:title" content="Echuu — OC 크리에이터를 위한 AI VTuber 플랫폼" />
+<meta data-seo="1" property="og:description" content="캐릭터를 설정하고 주제를 고르면, 캐릭터가 이야기를 들려주고 시청자와 소통합니다. Echuu는 OC 크리에이터를 위한 공동 창작 퍼포먼스 엔진이자 AI VTuber 스트리밍 플랫폼입니다." />
+<meta data-seo="1" property="og:type" content="website" />
+<meta data-seo="1" property="og:site_name" content="Echuu" />
+<meta data-seo="1" property="og:locale" content="ko" />
+<meta data-seo="1" property="og:image" content="/echuu-website-preview/website/figma/hero-shot.webp" />
+<meta data-seo="1" name="twitter:card" content="summary_large_image" />
+<meta data-seo="1" name="twitter:title" content="Echuu — OC 크리에이터를 위한 AI VTuber 플랫폼" />
+<meta data-seo="1" name="twitter:description" content="캐릭터를 설정하고 주제를 고르면, 캐릭터가 이야기를 들려주고 시청자와 소통합니다. Echuu는 OC 크리에이터를 위한 공동 창작 퍼포먼스 엔진이자 AI VTuber 스트리밍 플랫폼입니다." />
+<meta data-seo="1" name="twitter:image" content="/echuu-website-preview/website/figma/hero-shot.webp" />
+<script data-seo="1" type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://echuu.ai/#organization","name":"Echuu","legalName":"Anngel LLC","url":"https://echuu.ai"},{"@type":"WebSite","@id":"https://echuu.ai/#website","name":"Echuu","alternateName":"エチュウゥ","url":"https://echuu.ai/echuu-website-preview/website/en/","publisher":{"@id":"https://echuu.ai/#organization"},"inLanguage":["zh-CN","ja","en","ko"]},{"@type":"WebPage","@id":"https://echuu.ai/echuu-website-preview/website/ko/#page","url":"https://echuu.ai/echuu-website-preview/website/ko/","name":"Echuu — OC 크리에이터를 위한 AI VTuber 플랫폼","description":"캐릭터를 설정하고 주제를 고르면, 캐릭터가 이야기를 들려주고 시청자와 소통합니다. Echuu는 OC 크리에이터를 위한 공동 창작 퍼포먼스 엔진이자 AI VTuber 스트리밍 플랫폼입니다.","inLanguage":"ko","isPartOf":{"@id":"https://echuu.ai/#website"}}]}</script>
+</head>
   <body>
-    <div id="echuu-page-curtain" aria-hidden="true"><span class="echuu-page-curtain__mark">ECHUU</span></div>
-    <div id="root">
-      <main>
-        <h1>Echuu AI VTuber 直播创作平台</h1>
-        <p>使用 VRM 虚拟角色、摄像头实时动作捕捉、直播场景和角色人格工具，创建并播出属于你的原创虚拟主播内容。</p>
-        <nav><a href="/echuu-website-preview/website/zh/creators/">了解 Echuu</a> <a href="/echuu-website-preview/website/zh/journal/">VTuber 创作指南</a></nav>
-      </main>
-    </div>
+    <div id="echuu-page-curtain" aria-hidden="true"></div>
+    <div id="root"><main id="main" class="seo-static"><nav aria-label="메뉴"><a href="/echuu-website-preview/website/ko/">홈</a> · <a href="/echuu-website-preview/website/ko/blog/">제작 노트</a> · <a href="/echuu-website-preview/website/ko/creators/">크리에이터 협업</a> · <a href="/echuu-website-preview/website/ko/team/">팀</a></nav><h1> OC 크리에이터 를 위한 AI VTuber 플랫폼</h1><p>Echuu(Echo+Chuuu)는 오리지널 캐릭터(OC) 크리에이터를 위한 공동 창작 퍼포먼스 엔진이자 AI VTuber 스트리밍 플랫폼입니다.</p><section><h2>설정부터 방송까지, 세 단계</h2><section><h3>모습 고르기</h3><p>샘플 캐릭터를 쓰거나, 사용 권리가 있는 VRM 모델을 업로드하세요.</p></section><section><h3>페르소나 쓰기</h3><p>성격, 경험, 말투를 알려주세요.</p></section><section><h3>주제 정하기</h3><p>방송 주제를 쓰고, 미리보기 후 시작하세요.</p></section></section><section><h2>설정은 캐릭터 시트에만 있는 게 아닙니다.</h2><section><h3>설정대로 말하기</h3><p>성격과 지나온 이야기가 말투에 그대로 담깁니다.</p></section><section><h3>주제를 이야기로</h3><p>주제 하나에서 시작해 캐릭터가 들려줄 이야기를 만듭니다.</p></section><section><h3>시청자가 참여하기</h3><p>채팅과 선물이 다음 이야기에 영향을 줍니다.</p></section></section><section><h2>오늘은 토크, 다음 방송은?</h2><p>다른 모드도 개발 중입니다. 공개 시점은 아직 정해지지 않았습니다.</p></section><section><h2>캐릭터의 시작은
+크리에이터</h2><p>우리는 사람 그림 작가와 IP 창작을 언제나 지지합니다.</p><p>원화, 리깅, 3D 모델링 작가와 함께 캐릭터를 무대에 올리고 싶습니다.</p></section><section><h2>제작 노트</h2><article><h3><a href="/echuu-website-preview/website/ko/blog/cinematic-character-onboarding/">카메라 언어가 있는 캐릭터와의 첫 만남</a></h3><p>Echuu의 온보딩은 양식 작성이 아닙니다. 캐릭터 선택, 페르소나, 방송 주제를 연속된 카메라 샷으로 이어, 방송 전에 크리에이터가 캐릭터와 시각적 관계를 먼저 맺게 합니다.</p></article><article><h3><a href="/echuu-website-preview/website/ko/blog/blendshape-character-continuity/">표정은 장식이 아니라 캐릭터의 연속성</a></h3><p>BlendShape, 시선, 자세, 카메라는 하나의 시스템으로 움직여야 합니다. 와이드 샷, 클로즈업, 전환 중에도 캐릭터는 같은 성격을 유지해야 합니다.</p></article><article><h3><a href="/echuu-website-preview/website/ko/blog/responsible-ai-disclosure/">AI가 관여한 부분을 분명히 밝히기</a></h3><p>시청자는 AI로 구동되는 가상 캐릭터와 생성 콘텐츠를 알아볼 수 있어야 합니다. Echuu는 표시, 크리에이터 책임, 피드백 창구를 다듬어 생동감 있는 연기와 투명한 고지를 함께 세웁니다.</p></article></section><section><h2>첫 장면을 시작하기 전에</h2><section><h3>Echuu는 무엇인가요?</h3><p>Echuu는 오리지널 캐릭터(OC) 창작자를 위한 AI VTuber 퍼포먼스 및 방송 제작 플랫폼입니다. 캐릭터, 설정, 주제를 준비해 이야기와 시청자 상호작용을 만듭니다.</p></section><section><h3>AI 퍼포먼스와 모션 캡처는 어떻게 다른가요?</h3><p>AI 퍼포먼스는 캐릭터 설정과 주제로 대화와 음성을 생성합니다. 모션 캡처는 사람의 표정과 움직임을 캐릭터에 반영합니다. 제공 기능은 현재 베타 버전에 따라 다릅니다.</p></section><section><h3>어떤 모델을 준비해야 하나요?</h3><p>예시 캐릭터나 사용 권한이 있는 VRM 모델을 준비하고 설정과 주제를 추가하세요. VRM은 3D 캐릭터 형식입니다. 업로드 전에 모델과 관련 소재의 이용 권한을 확인하세요.</p></section><section><h3>채팅과 선물은 캐릭터에 어떤 영향을 주나요?</h3><p>지원되는 데모에서는 채팅과 선물이 응답과 다음 주제에 반영될 수 있습니다. 데모가 모든 계정에 모든 기능이 공개되었다는 뜻은 아닙니다. 초대 및 버전 안내를 확인하세요.</p></section><section><h3>캐릭터의 권리가 이전되나요?</h3><p>창작자는 오리지널 캐릭터와 소재의 기존 권리를 유지하고, 타인의 소재는 각 라이선스를 따릅니다. 베타 신청이나 업로드는 웹사이트 공개 동의가 아닙니다. 자세한 내용은 캐릭터 및 소재 약관을 확인하세요.</p></section><section><h3>베타는 어떻게 신청하나요?</h3><p>“베타 참여”에서 현재 신청 방법을 확인하세요. 온라인 신청이 준비 중이면 cory@anngel.live로 직접 이메일을 보낼 수 있습니다. 메일 앱을 여는 것만으로 신청되지 않으며 비밀번호도 필요하지 않습니다.</p></section></section><footer><a href="mailto:cory@anngel.live">cory@anngel.live</a><p>Echuu · Anngel LLC</p><nav aria-label="언어"><a href="/echuu-website-preview/website/zh/" hrefLang="zh-CN">简体中文 </a><a href="/echuu-website-preview/website/ja/" hrefLang="ja">日本語 </a><a href="/echuu-website-preview/website/en/" hrefLang="en">English </a><a href="/echuu-website-preview/website/ko/" hrefLang="ko">한국어 </a></nav></footer></main></div>
   </body>
 </html>

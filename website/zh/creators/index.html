@@ -11,41 +11,57 @@
       href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500&family=MuseoModerno:wght@400;500;600;700;800;900&family=Shrikhand&family=Zen+Maru+Gothic:wght@500;700&family=42dot+Sans:wght@300;400;700;800&family=Agu+Display&family=Noto+Serif+SC:wght@300;400&display=swap"
       rel="stylesheet"
     />
-    <meta name="description" content="Echuu 是面向虚拟主播与原创角色创作者的 AI VTuber 直播创作平台，提供 VRM 角色、实时动作捕捉、直播场景、角色人格与内容制作工具。" />
-    <meta name="keywords" content="AI VTuber,虚拟主播,动作捕捉,VRM,虚拟直播,Echuu" />
-    <meta name="robots" content="index,follow,max-image-preview:large" />
+    
+    
+    
     <meta name="referrer" content="strict-origin-when-cross-origin" />
     <meta name="theme-color" content="#58b8ed" />
+    <script>
+      // 首页开场是黑底：首帧、加载幕都用黑色，不再闪一下蓝色。子页面仍是天空色。
+      (function(){var p=location.pathname.replace(/\/+$/,'');if(p.indexOf('/website')<0||/\/website(\/(zh|en|ja|ko))?$/.test(p))document.documentElement.classList.add('echuu-dark-boot')})();
+    </script>
     <style id="echuu-critical-transition">
       html,body{margin:0;min-height:100%;background:#73c8f2;color:#fff}body{overflow-x:hidden}
-      #echuu-page-curtain{position:fixed;inset:0;z-index:2147483647;display:grid;place-items:center;overflow:hidden;background:radial-gradient(ellipse at 78% 18%,rgba(255,255,255,.72) 0 9%,rgba(255,255,255,0) 31%),radial-gradient(ellipse at 28% 74%,rgba(255,255,255,.62) 0 12%,rgba(255,255,255,0) 35%),linear-gradient(155deg,#22b6f0 0%,#8bd2f2 45%,#dfe8ff 100%);opacity:1;transition:opacity 240ms cubic-bezier(.23,1,.32,1);pointer-events:auto}
-      #echuu-page-curtain::before{content:"";position:absolute;inset:-16%;background:radial-gradient(ellipse at 35% 35%,rgba(255,255,255,.5),transparent 30%),radial-gradient(ellipse at 70% 68%,rgba(255,255,255,.38),transparent 32%);transform:scale(1.05)}
-      .echuu-page-curtain__mark{position:relative;display:flex;align-items:center;gap:14px;font:500 13px/1 Arial,sans-serif;letter-spacing:.24em;text-transform:uppercase;text-shadow:0 1px 12px rgba(23,86,137,.28)}
-      .echuu-page-curtain__mark::before{content:"";width:9px;height:9px;border:2px solid currentColor;border-radius:50%;box-shadow:18px 0 0 -3px currentColor}
+      html.echuu-dark-boot,html.echuu-dark-boot body{background:#000}
+      /* 加载幕：只是一块和页面同色的纯色，盖住 React 接管前的 SEO 文字；没有字标、没有渐变 */
+      #echuu-page-curtain{position:fixed;inset:0;z-index:2147483647;background:#73c8f2;opacity:1;transition:opacity 240ms cubic-bezier(.23,1,.32,1);pointer-events:auto}
+      html.echuu-dark-boot #echuu-page-curtain{background:#000}
       html.echuu-ready #echuu-page-curtain{opacity:0;pointer-events:none}
       html.echuu-leaving #echuu-page-curtain{opacity:1;pointer-events:auto;transition-duration:180ms}
-      @media(prefers-reduced-motion:reduce){#echuu-page-curtain{transition:none}.echuu-page-curtain__mark{display:none}}
+      @media(prefers-reduced-motion:reduce){#echuu-page-curtain{transition:none}}
     </style>
-    <noscript><style>#echuu-page-curtain{display:none}</style></noscript>
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Echuu" />
-    <meta property="og:title" content="Echuu AI VTuber 直播创作平台" />
-    <meta property="og:description" content="从原创角色、实时动作捕捉到直播互动，一站式创建属于你的 AI VTuber。" />
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Echuu AI VTuber 直播创作平台" />
-    <meta name="twitter:description" content="从原创角色、实时动作捕捉到直播互动，一站式创建属于你的 AI VTuber。" />
-    <title>Echuu AI VTuber 直播创作平台｜VRM 动作捕捉与虚拟直播</title>
-    <script type="module" crossorigin src="/echuu-website-preview/app-build/index-4GiA1K1Q.js"></script>
-    <link rel="stylesheet" crossorigin href="/echuu-website-preview/app-build/index-Cjrxq7u0.css">
-  </head>
+    <noscript><style>
+      #echuu-page-curtain{display:none}html,body{background:#f3f7f8!important;color:#173548!important}
+      .seo-static{max-width:850px;margin:auto;padding:32px 24px;font:17px/1.8 system-ui,sans-serif}
+      .seo-static h1{font-size:32px;line-height:1.3}.seo-static a{color:#155c88}.seo-static section{margin:32px 0}
+    </style></noscript>
+    
+    
+    
+    
+    
+    
+    
+    
+    <script type="module" crossorigin src="/echuu-website-preview/app-build/index-DbmrMEX1.js"></script>
+    <link rel="stylesheet" crossorigin href="/echuu-website-preview/app-build/index-VBhPz4d7.css">
+  <title>创作者合作 — Echuu</title>
+<meta data-seo="1" name="description" content="原画师、皮套画师与 3D 建模师的合作说明。" />
+<meta data-seo="1" name="robots" content="noindex,follow" />
+<meta data-seo="1" property="og:title" content="创作者合作 — Echuu" />
+<meta data-seo="1" property="og:description" content="原画师、皮套画师与 3D 建模师的合作说明。" />
+<meta data-seo="1" property="og:type" content="website" />
+<meta data-seo="1" property="og:site_name" content="Echuu" />
+<meta data-seo="1" property="og:locale" content="zh_CN" />
+<meta data-seo="1" property="og:image" content="/echuu-website-preview/website/figma/hero-shot.webp" />
+<meta data-seo="1" name="twitter:card" content="summary_large_image" />
+<meta data-seo="1" name="twitter:title" content="创作者合作 — Echuu" />
+<meta data-seo="1" name="twitter:description" content="原画师、皮套画师与 3D 建模师的合作说明。" />
+<meta data-seo="1" name="twitter:image" content="/echuu-website-preview/website/figma/hero-shot.webp" />
+<script data-seo="1" type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://echuu.ai/#organization","name":"Echuu","legalName":"Anngel LLC","url":"https://echuu.ai"},{"@type":"WebSite","@id":"https://echuu.ai/#website","name":"Echuu","alternateName":"エチュウゥ","url":"https://echuu.ai/echuu-website-preview/website/en/","publisher":{"@id":"https://echuu.ai/#organization"},"inLanguage":["zh-CN","ja","en","ko"]},{"@type":"WebPage","@id":"https://echuu.ai/echuu-website-preview/website/zh/creators/#page","url":"https://echuu.ai/echuu-website-preview/website/zh/creators/","name":"创作者合作 — Echuu","description":"原画师、皮套画师与 3D 建模师的合作说明。","inLanguage":"zh-CN","isPartOf":{"@id":"https://echuu.ai/#website"}}]}</script>
+</head>
   <body>
-    <div id="echuu-page-curtain" aria-hidden="true"><span class="echuu-page-curtain__mark">ECHUU</span></div>
-    <div id="root">
-      <main>
-        <h1>Echuu AI VTuber 直播创作平台</h1>
-        <p>使用 VRM 虚拟角色、摄像头实时动作捕捉、直播场景和角色人格工具，创建并播出属于你的原创虚拟主播内容。</p>
-        <nav><a href="/echuu-website-preview/website/zh/creators/">了解 Echuu</a> <a href="/echuu-website-preview/website/zh/journal/">VTuber 创作指南</a></nav>
-      </main>
-    </div>
+    <div id="echuu-page-curtain" aria-hidden="true"></div>
+    <div id="root"><main id="main" class="seo-static"><nav aria-label="菜单"><a href="/echuu-website-preview/website/zh/">首页</a> · <a href="/echuu-website-preview/website/zh/blog/">创作日志</a> · <a href="/echuu-website-preview/website/zh/creators/">创作者合作</a> · <a href="/echuu-website-preview/website/zh/team/">团队</a></nav><h1>创作者合作</h1><p>原画师、皮套画师与 3D 建模师的合作说明与联系方式。</p><p>我们永远支持人类画手与 IP 创作。</p><section><h3>作品展示</h3><p>在官网或演示里展示你的作品，署名随作品一起出现。</p></section><section><h3>角色与模型合作</h3><p>原画、皮套或 3D 模型，讨论一次具体的角色合作。</p></section><section><h3>联合演示</h3><p>一起做一场演示，公开前先确认展示范围。</p></section><p>以上是合作意向说明。目前没有接单市场、订单系统、分成政策或官方认证。</p><section><h3>AI 参与表演</h3><p>角色的对话、语音等表演内容可能由 AI 生成。</p></section><section><h3>角色权利不转移</h3><p>你对原创角色和素材保留原有权利；第三方素材遵循各自授权。</p></section><section><h3>展示另征同意</h3><p>申请内测或上传角色，不等于同意被官网展示。</p></section><footer><a href="mailto:cory@anngel.live">cory@anngel.live</a><p>Echuu · Anngel LLC</p><nav aria-label="语言"><a href="/echuu-website-preview/website/zh/creators/" hrefLang="zh-CN">简体中文 </a><a href="/echuu-website-preview/website/ja/creators/" hrefLang="ja">日本語 </a><a href="/echuu-website-preview/website/en/creators/" hrefLang="en">English </a><a href="/echuu-website-preview/website/ko/creators/" hrefLang="ko">한국어 </a></nav></footer></main></div>
   </body>
 </html>
