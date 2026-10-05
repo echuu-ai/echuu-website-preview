@@ -7,10 +7,9 @@
     <link rel="apple-touch-icon" href="/echuu-website-preview/apple-touch-icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=42dot+Sans:wght@300;400;700;800&family=Agu+Display&family=Noto+Serif+SC:wght@300;400&display=swap"
-      rel="stylesheet"
-    />
+    <!-- Google Fonts 首屏都不是必需的（韩文 42dot、一处 Agu Display 标题、宋体回落）：media=print 先以最低优先级异步下载、不阻塞首帧，加载完再生效 -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=42dot+Sans:wght@300;400;700;800&family=Agu+Display&family=Noto+Serif+SC:wght@300;400&display=swap" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=42dot+Sans:wght@300;400;700;800&family=Agu+Display&family=Noto+Serif+SC:wght@300;400&display=swap" /></noscript>
     
     
     
@@ -18,7 +17,9 @@
     <meta name="theme-color" content="#58b8ed" />
     <script>
       // 首页开场是黑底：首帧、加载幕都用黑色，不再闪一下蓝色。子页面仍是天空色。
-      (function(){var p=location.pathname.replace(/\/+$/,'');if(p.indexOf('/website')<0||/\/website(\/(zh|en|ja|ko))?$/.test(p))document.documentElement.classList.add('echuu-dark-boot')})();
+      (function(){var p=location.pathname.replace(/\/+$/,'');if(p.indexOf('/website')<0||/\/website(\/(zh|en|ja|ko))?$/.test(p)){document.documentElement.classList.add('echuu-dark-boot');
+        // 开场纸张是首屏最大元素（LCP）：只在首页、且不是「减少动态效果」（那时直接进首屏静态图）时提前下载
+        if(!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)){var l=document.createElement('link');l.rel='preload';l.as='image';l.href='/echuu-website-preview/website/figma/opening-paper/sketch-body.webp';l.setAttribute('fetchpriority','high');document.head.appendChild(l)}}})();
     </script>
     <style id="echuu-critical-transition">
       html,body{margin:0;min-height:100%;background:#73c8f2;color:#fff}body{overflow-x:hidden}
@@ -43,8 +44,8 @@
     
     
     
-    <script type="module" crossorigin src="/echuu-website-preview/app-build/index-DY6KKbQp.js"></script>
-    <link rel="stylesheet" crossorigin href="/echuu-website-preview/app-build/index-BQr2FYZC.css">
+    <script type="module" crossorigin src="/echuu-website-preview/app-build/index--DQhFWjl.js"></script>
+    <link rel="stylesheet" crossorigin href="/echuu-website-preview/app-build/index-DN6_zXCU.css">
   <title>Echuu — OC 크리에이터를 위한 AI VTuber 플랫폼</title>
 <meta data-seo="1" name="description" content="캐릭터를 설정하고 주제를 고르면, 캐릭터가 이야기를 들려주고 시청자와 소통합니다. Echuu는 OC 크리에이터를 위한 공동 창작 퍼포먼스 엔진이자 AI VTuber 스트리밍 플랫폼입니다." />
 <meta data-seo="1" name="robots" content="noindex,follow" />
